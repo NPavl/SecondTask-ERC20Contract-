@@ -1,0 +1,6 @@
+# work folders, files
+node_modules
+.env
+description.txt
+artifacts
+cache
