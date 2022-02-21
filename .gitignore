@@ -4,3 +4,4 @@ node_modules
 description.txt
 artifacts
 cache
+yarn-error.log
