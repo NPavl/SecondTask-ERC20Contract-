@@ -1,12 +1,11 @@
 
 require("@nomiclabs/hardhat-waffle");
-// require("@nomiclabs/hardhat-web3");
 const {PRIVATE_KEY, ALCHEMY_API_KEY, ETHERSCAN_API_KEY} = process.env;
 require("@nomiclabs/hardhat-etherscan");
 // require('solidity-coverage');
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
-  const accounts = await hre.ethers.getSigners();
+  const accounts = await ethers.getSigners();
 
   for (const account of accounts) {
     console.log(account.address);
@@ -22,11 +21,11 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
       accounts: [`0x${PRIVATE_KEY}`],
       network_id: 4
     },
-    // ropsten: {
-    //   url: `https://ropsten.infura.io/v3/${INFURA_API_KEY}`,
-    //   accounts: [`0x${PRIVATE_KEY}`],
-    //   network_id: 3
-    // },
+    ropsten: {
+      url: `https://ropsten.infura.io/v3/${INFURA_API_KEY}`,
+      accounts: [`0x${PRIVATE_KEY}`],
+      network_id: 3
+    },
     // hardhat: {
     //   forking: {
     //     url: `https://eth-rinkeby.alchemyapi.io/v2/${ALCHEMY_API_KEY}`

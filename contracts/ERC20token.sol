@@ -27,7 +27,7 @@ contract ERC20token {
     }
 
     modifier OnlyAdmin() {
-        require(msg.sender == admin);
+        require(msg.sender == admin, "caller is not the admin");
         _;
     }
 
@@ -59,7 +59,7 @@ contract ERC20token {
     }
 
     function transfer(address _to, uint256 _value) public {
-        require(balances[msg.sender] >= _value, '');
+        require(balances[msg.sender] >= _value, 'Not enough tokens');
         balances[msg.sender] -= _value;
         balances[_to] += _value;
         emit Transfer(msg.sender, _to, _value);
@@ -72,7 +72,7 @@ contract ERC20token {
     ) public {
         require(
             balances[_from] >= _value && allowed[_from][msg.sender] >= _value,
-            "not allowed"
+            "Not enough tokens or amount is more than allowed"
         );
         balances[_from] -= _value;
         balances[_to] += _value;

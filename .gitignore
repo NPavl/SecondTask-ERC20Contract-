@@ -1,5 +1,6 @@
 # work folders, files
 node_modules
+tasks
 .env
 description.txt
 artifacts
