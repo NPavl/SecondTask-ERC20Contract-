@@ -4,4 +4,8 @@ node_modules
 description.txt
 artifacts
 cache
+frontend
+coverage
+coverage.json
+typechain
 yarn-error.log

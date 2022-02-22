@@ -2,7 +2,7 @@
 require("@nomiclabs/hardhat-waffle");
 const {PRIVATE_KEY, ALCHEMY_API_KEY, ETHERSCAN_API_KEY} = process.env;
 require("@nomiclabs/hardhat-etherscan");
-// require('solidity-coverage');
+require('solidity-coverage');
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await ethers.getSigners();
