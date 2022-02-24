@@ -5,7 +5,7 @@
   "author": "Pavlov Nikolai",
   "license": "Unlicense",
   "dependencies": {
-  "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.0",
@@ -16,6 +16,7 @@
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.4",
     "hardhat": "^2.8.4",
+    "hardhat-gas-reporter": "^1.0.8",
     "install": "^0.13.0",
     "solidity-coverage": "^0.7.20"
   }
