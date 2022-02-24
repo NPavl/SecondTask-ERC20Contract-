@@ -1,6 +1,6 @@
 require('dotenv').config();
 require("@nomiclabs/hardhat-waffle")
-const {PRIVATE_KEY, ALCHEMY_API_KEY, ETHERSCAN_API_KEY} = process.env
+const {PRIVATE_KEY, ALCHEMY_API_KEY, ETHERSCAN_API_KEY, COINMARKETCAP_API_KEY} = process.env
 require("@nomiclabs/hardhat-etherscan")
 require('solidity-coverage')
 require("hardhat-gas-reporter");
@@ -38,6 +38,16 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
     //   network_id: 97
     // }
   },
+  gasReporter: {
+    currency: "USD",
+    coinmarketcap: COINMARKETCAP_API_KEY || null, // process.env.COINMARKETCAP_API_KEY
+  },
+  // gasReporter: {
+  //   enabled: process.env.REPORT_GAS ? true : false, 
+  //   currency: "ETH",
+  //   // gasPrice: 21, 
+  //   coinmarketcap: COINMARKETCAP_API_KEY
+  // },
   etherscan: {
     apiKey: ETHERSCAN_API_KEY
   }
