@@ -43,8 +43,8 @@ npx hardhat run --network localhost scripts/deploy.js
 npx hardhat verify --constructor-args scripts/arguments.js 0x9E1765B00c1EE2eeB38c93EE2997c138024840D2 --network rinkiby
 ```
 #### Test Report:
-![]
+![BLR1](https://github.com/NPavl/SecondTask-ERC20Contract-/blob/master/report/tests-report.PNG)
 #### Coverage report: 
-![] 
+![BLR2](https://github.com/NPavl/SecondTask-ERC20Contract-/blob/master/report/coverage-report.PNG) 
 #### Gas report:
-![] 
+![BLR3](https://github.com/NPavl/SecondTask-ERC20Contract-/blob/master/report/gas-report.PNG) 
