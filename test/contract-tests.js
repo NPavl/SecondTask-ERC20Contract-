@@ -165,6 +165,12 @@ describe("Transfer functions", () => {
             .to.be.revertedWith('Not enough tokens or amount is more than allowed')
     })
 
+    it('throws and error if permission to withdraw tokens is not received', async () => {
+        await token.connect(admin).transfer(addr2.address, value)
+        await expect(token.connect(admin).approve(addr1.address, value1))
+            .to.be.revertedWith('Not enough tokens for approve')
+
+    })
 })
 
 

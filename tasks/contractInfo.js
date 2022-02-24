@@ -12,7 +12,7 @@ async function main() {
         const decimals = await myContract.decimals()
         console.log("ContractInfo:\n" + 
         "Description: " + name + "\n" +
-        "Rinkiby testNet contract token address: 0x9E1765B00c1EE2eeB38c93EE2997c138024840D2" + "\n" + 
+        "Rinkiby testNet contract token address: 0xcd61492203af21301DCc53b4F042998DF65d128E" + "\n" + 
         "Symbol: " + symbol + "\n" + 
         "Total supply: " + totalSupply + "\n" +
         "Decimals: " + decimals + "\n"  

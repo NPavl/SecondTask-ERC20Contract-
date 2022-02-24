@@ -6,20 +6,20 @@ async function main() {
     const provider = new ethers.providers.JsonRpcProvider(URL_ALCHEMY)
     const admin = new ethers.Wallet(PRIVATE_KEY, provider)
     const signer = new ethers.Wallet(PRIVATE_KEY2, provider)
-    const myContract = await ethers.getContractAt('ERC20token', contractAddress, signer)
+    const myContract = await ethers.getContractAt('ERC20token', contractAddress, admin)
     const value = ethers.utils.parseEther('5')
     
     try {
         
         const contractBalance = await myContract.totalSupply()
         const contractBalanceEth = ethers.utils.formatEther(contractBalance)
-        console.log(`Balance before transfer: ${contractBalanceEth}BLR`)
+        console.log(`Balance before transfer: ${contractBalanceEth} BLR`)
         // getting permission to withdraw:
         await myContract.connect(admin).approve(signer.address, value)
 
         const response = await myContract.connect(signer).allowance(admin.address, signer.address)
         const responseEth = ethers.utils.formatEther(response)
-        console.log(`Allowed to withdraw from this address: ${responseEth}BLR`)
+        console.log(`Allowed to withdraw from this address: ${responseEth} BLR`)
         
         //---------
         // transferring tokens and then checking that it is allowed to be equal to minus value.

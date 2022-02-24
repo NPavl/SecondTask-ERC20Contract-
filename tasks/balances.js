@@ -11,7 +11,7 @@ async function main() {
     try {
         const response = await myContract.connect(signer).balanceOf(signer.address)
         const responseEth = ethers.utils.formatEther(response)
-        console.log(`Address balance: ${signer.address} is equal to: ${responseEth}BLR`)
+        console.log(`Address balance: ${signer.address} is equal to: ${responseEth} BLR`)
 
     } catch (error) {
         console.log('Something went wrong: ', error)

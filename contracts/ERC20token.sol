@@ -81,6 +81,7 @@ contract ERC20token {
     }
 
     function approve(address _spender, uint256 _value) public returns(bool){
+        require(balances[msg.sender] >= _value, "Not enough tokens for approve");
         allowed[msg.sender][_spender] += _value;
         emit Approval(msg.sender, _spender, _value);
         return true;

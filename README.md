@@ -3,7 +3,7 @@
 #### Token contract address (Rinkiby): 
 0x9E1765B00c1EE2eeB38c93EE2997c138024840D2
 #### Etherscan verify: 
-https://rinkeby.etherscan.io/address/0x9E1765B00c1EE2eeB38c93EE2997c138024840D2#code
+https://rinkeby.etherscan.io/address/0xcd61492203af21301DCc53b4F042998DF65d128E#code
 
 ### Description task: 
 #### Написать токен стандарта ERC-20
@@ -40,6 +40,7 @@ npx hardhat run scripts/file-name.js
 npx hardhat test 
 npx hardhat coverage
 npx hardhat run --network localhost scripts/deploy.js
+npx hardhat run scripts/deploy.js --network rinkiby
 npx hardhat verify --constructor-args scripts/arguments.js 0x9E1765B00c1EE2eeB38c93EE2997c138024840D2 --network rinkiby
 ```
 #### Test Report:
