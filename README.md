@@ -24,11 +24,11 @@ https://rinkeby.etherscan.io/address/0xcd61492203af21301DCc53b4F042998DF65d128E#
 #### All packages:
 ```
 yarn init 
-yarn add --save-dev hardhat 
+yarn add --dev hardhat 
 yarn add --dev @nomiclabs/hardhat-ethers ethers 
 yarn add --dev @nomiclabs/hardhat-waffle ethereum-waffle chai
 yarn add --save-dev @nomiclabs/hardhat-etherscan
-yarn add install dotenv
+yarn add install dotenv 
 yarn add --dev solidity-coverage
 yarn add --dev hardhat-gas-reporter 
 yarn add hardhat-gas-reporter --dev
