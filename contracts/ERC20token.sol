@@ -7,6 +7,7 @@ contract ERC20token {
     string public symbol;
     address public admin;
     uint256 public totalSupply;
+    // uint256 public totalSupply = 1000000;
     uint8 public decimals; // 10^18 wei
 
     mapping(address => uint256) balances;
@@ -24,6 +25,7 @@ contract ERC20token {
         symbol = _symbol;
         decimals = _decimals;
         admin = msg.sender;
+        //  balances[msg.sender] = totalSupply; 
     }
 
     modifier OnlyAdmin() {
