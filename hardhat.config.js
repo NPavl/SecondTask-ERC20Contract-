@@ -4,6 +4,7 @@ const {PRIVATE_KEY, ALCHEMY_API_KEY, ETHERSCAN_API_KEY, COINMARKETCAP_API_KEY} =
 require("@nomiclabs/hardhat-etherscan")
 require('solidity-coverage')
 require("hardhat-gas-reporter");
+require('hardhat-contract-sizer');
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await ethers.getSigners()

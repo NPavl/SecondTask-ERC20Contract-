@@ -32,6 +32,7 @@ yarn add install dotenv
 yarn add --dev solidity-coverage
 yarn add --dev hardhat-gas-reporter 
 yarn add hardhat-gas-reporter --dev
+yarn add --dev hardhat-contract-sizer
 ```
 #### Main command:
 ```
@@ -42,6 +43,8 @@ npx hardhat coverage
 npx hardhat run --network localhost scripts/deploy.js
 npx hardhat run scripts/deploy.js --network rinkiby
 npx hardhat verify --constructor-args scripts/arguments.js 0x9E1765B00c1EE2eeB38c93EE2997c138024840D2 --network rinkiby
+yarn run hardhat size-contracts 
+yarn run hardhat size-contracts --no-compile
 ```
 #### Testing report:
 ![BLR1](https://github.com/NPavl/SecondTask-ERC20Contract-/blob/master/report/tests-report.PNG)
